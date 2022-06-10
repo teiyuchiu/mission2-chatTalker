@@ -1,0 +1,554 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/*背景圖*/
+.background{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg");
+	background-size: 65vw, 26vw, 22.6vw, 150px, 0vw;
+	background-position: right top, -18% 18%, 108% 58%, 7% 87%, center 6%;
+	background-repeat: no-repeat;
+}
+@media(max-width:767px){
+	.background{
+		background-size: 0, 26vw, 22.6vw, 150px, 90vw;
+	}
+}
+
+/*回頂部*/
+.bottom-top{
+	display: block;
+	color: white;
+	font-weight: bold;
+	background: #56C4C5;
+	width: 71px;
+	height: 71px;
+	border-radius: 50%;
+	text-decoration: none;
+	text-align: center;
+	padding: 28px 0;
+	position:fixed;
+	right: 5%;
+	bottom: 5%;
+}
+.bottom-top:hover{
+	background: #2E2E2E;
+}
+
+/*container*/
+.container{
+    max-width: 1088px;
+    margin: 0 auto;
+}
+@media(max-width:1088px){
+	.container{
+		max-width: 1128px;
+		padding: 0 20px;
+	}
+}
+
+/*header*/
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.header .logo img{
+	display: block;
+	height: 40px;
+	margin: 24px 0;	
+}
+.header .button-fee{
+	display: block;
+	color: #FFFFFF;
+	line-height: 1.5;
+	text-decoration: none;
+	width: 128px;
+	height: 40px;
+	background: #FF5D50;
+	text-align: center;
+	padding: 7px;
+	border-radius: 22px;
+	margin: 24px 0;
+}
+.header .button-fee:hover{
+	border: 2px solid #FF5D50;
+}
+@media(max-width:767px){
+	.header{
+		border-bottom: 2px solid #FFD153;
+	}
+	.header .logo img{
+		height: 24px;
+	}
+	.header .button-fee{
+		margin: 16px 0;
+	}
+}
+
+/*home*/
+.home{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 217px;
+}
+.home img{
+	width: 49%;
+}
+.home-text span{
+	color: #56C4C5;
+	font-size: 18px;
+	line-height: 1.44;
+	font-weight: bold;
+}
+h1{
+	color: #221E1F;
+	font-size: 48px;
+	line-height: 1.46;
+	font-weight: bold;
+	text-align: left;
+	margin: 8px 0 16px;
+}
+.home-text p{
+	color: #221E1F;
+	font-size: 20px;
+	line-height: 1.45;
+}
+@media(max-width:991px){
+	.home{
+		margin-bottom: 98.5px;
+	}
+	.home-text span, .home-text p{
+		font-size: 16px;
+	}
+	h1{
+		font-size: 32px;
+	}
+}
+@media(max-width:767px){
+	.home{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 98.5px;
+	}
+	.home img{
+		width: 81%;
+		margin: 32px auto;
+	}
+}
+
+/*m1-app*/
+.m1-app{
+	margin-bottom: 100px;
+}
+h2{
+	color: #221E1F;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 1.44;
+	text-align: center;
+}
+.app-content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.app-content li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.app-content img{
+	height: 90px;
+	margin: 48px 0 24px;
+}
+.app-content h3{
+	color: #221E1F;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.46;
+	text-align: center;
+	margin-bottom: 24px;
+}
+.app-content p{
+	color: #747474;
+	line-height: 1.5;
+	text-align: center;
+}
+@media(max-width:991px){
+	h2{
+		font-size: 28px;
+	}
+	.app-content h3{
+		font-size: 18px;
+	}
+	.app-content p{
+		font-size: 16px;
+	}
+}
+@media(max-width:767px){
+	.m1-app{
+		margin-bottom: 60px;
+	}
+	.app-content{
+		flex-direction: column;
+		align-items: center;
+	}
+	.app-content img{
+		margin-top: 32px;
+	}
+}
+
+/*m2-role*/
+.m2-role{
+    margin-bottom: 76px;
+}
+.m2-role p{
+    color: #221E1F;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.45;
+    margin: 16px 0 48px;
+}
+.role-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.role-content li{
+    border-radius: 12px;
+    width: 260px;
+    height: 388px;
+    background: #FFFFFF;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px #00000014;
+}
+.role-content img{
+    border-radius: 12px 12px 0 0;
+}
+.role-content h3{
+    color: #56C4C5;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 16px 0;
+    text-align: center;
+}
+.role-content p{
+    font-size: 16px;
+    color: #221E1F;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 24px;
+}
+@media(max-width:1088px){
+    .role-content{
+        justify-content: space-evenly;
+    }
+    .role-content li{
+        margin: 0 50px 24px ;
+    }
+}
+@media(max-width:575px){
+    .m2-role{
+        margin-bottom: 46px;
+    }
+}
+
+/*m3-skill*/
+.m3-skill{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: 72px;
+}
+.skill-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto 36px;
+}
+.skill-text h2{
+	text-align: left;
+}
+.skill-text p{
+	color: #221E1F;
+	font-size: 18px;
+	line-height: 1.44;
+	margin: 16px 0 24px;
+}
+.bottom-fee{
+	display: block;
+	color: #FFFFFF;
+	font-size: 18px;
+	background: #56C4C5;
+	text-align: center;
+	text-decoration: none;
+	width: 136px;
+	height: 49px;
+	border-radius: 27px;
+	padding: 15px;
+}
+.bottom-fee:hover{
+	background: #FF5D50;
+}
+.skill-content{
+	display: flex;
+	width: 47%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.skill-content li{
+	width: 230px;
+	height: 280px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 30px 30px 48px;
+	margin-bottom: 28px;
+	box-shadow: 0 2px 10px #00000014;
+	border-radius: 12px;
+	background: white;
+}
+.icon1,.icon2,.icon3,.icon4{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: white;
+	width: 86px;
+	height: 86px;
+	border-radius: 50%;
+	box-shadow: 0 2px 10px #00000014;
+}
+.icon1{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon01.svg");
+}
+.icon2{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon02.svg");
+}
+.icon3{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon03.svg");
+}
+.icon4{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon04.svg");
+}
+.skill-content h3{
+	color: #221E1F;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.44;
+	margin: 24px 0 16px;
+}
+.skill-content p{
+	color: #221E1F;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+@media(max-width:1088px){
+	.m3-skill{
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 36px;
+	}
+	.skill-text{
+		align-items: center;
+	}
+	.skill-text h2{
+		text-align: center;
+	}
+	.skill-text p{
+		font-size: 16px;
+		text-align: center;
+	}
+	.skill-content{
+		justify-content: space-evenly;
+		width: 100%;
+	}
+}
+@media(max-width:991px){
+	.skill-content li{
+		margin: 0 50px 24px;
+	}	
+}
+@media(max-width:575px){
+	.skill-content li{
+		margin-bottom: 24px;
+	}
+}
+
+/*m4-comment*/
+.m4-comment{
+	margin-bottom: 134px;
+}
+.comment-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	height: 335px;
+	margin-top: 48px;
+	padding-top: 56px;
+	overflow-x: auto;
+}
+.comment-content li{
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px #00000014;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 0 8px;
+	align-items: flex-start;
+	padding: 48px 30px 16px;
+}
+.user1,.user2,.user3{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 32px;
+	top: -56px;
+}
+.user1{
+	background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user01.jpg?raw=true");
+}
+.user2{
+	background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user02.jpg?raw=true");
+}
+.user3{
+	background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user03.jpg?raw=true");
+}
+.comment-content p{
+	color: #221E1F;
+	line-height: 1.5;
+}
+.line{
+	border: 1px solid #DDDDDD;
+	width: 270px;
+	margin: 24px 0 ;
+}
+.comment-content span{
+	color: #221E1F;
+	font-weight: bold;
+	line-height: 1.5;
+}
+.fivestar{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 8px;
+}
+.star{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 24px;
+	width:121px;
+}
+.star img{
+	display: block;
+	height: 16px;
+}
+@media(max-width:575px){
+	.comment-content{
+		width: 335px;
+		margin: 0 auto;	
+	}
+	.comment-content li{
+		padding: 48px 16px 16px;
+	}
+	.m4-comment h2{
+		margin-bottom: 50px;
+	}
+	.line{
+		width: 288px;
+	}
+}
+
+/*footer-plan*/
+.footer-plan{
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 503px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.footer-plan h2{
+	margin: 260px 0 48px;
+}
+@media(max-width:767px){
+	.footer-plan{
+		height: 461px;
+	}
+	.footer-plan h2{
+		font-size: 24px;
+		margin: 293px 0 24px;
+	}
+}
+
+/*footer*/
+.footer{
+	background: #f5f5f5;
+	text-align: center;
+	padding: 16px;
+}
